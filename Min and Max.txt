@@ -1,0 +1,11 @@
+import numpy as np
+if __name__ == '__main__':
+    arr = []
+    row, col = map(int,input().split())
+    for r in range(0,row):
+        i = list(map(int,input().split()))
+        arr.append(i)
+    #print(arr)
+
+    res = np.max(np.min(arr, axis=1))
+    print(res)

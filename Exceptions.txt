@@ -1,0 +1,12 @@
+
+if __name__ == '__main__':
+    n = int(input())
+    for i in range(0,n):
+        x,y = input().split()
+        try:
+            r = int(x)/int(y)
+            print(int(r))
+        except ZeroDivisionError as e:
+            print ("Error Code:",'integer division or modulo by zero')
+        except ValueError as e2:
+            print ("Error Code:",e2)

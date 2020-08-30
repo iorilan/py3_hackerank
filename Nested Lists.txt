@@ -1,0 +1,29 @@
+if __name__ == '__main__':
+    l = list()
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        l.append([name,score])
+
+    l.sort(key=lambda x:x[1])
+    #print(l)
+
+    res = [];
+    length = len(l)
+    for i in range(0,length-1):
+        if l[i][1] != l[i+1][1]:
+            score = l[i+1][1]
+            for i1 in range(i+1,length):
+                if l[i1][1] != score: 
+                    i1=length
+                    i=length
+                    break;
+                else:
+                    res.append(l[i1][0])
+            break
+
+    if len(res) > 0:
+        #print(res)
+        res.sort()
+        for r in res:
+            print (r)

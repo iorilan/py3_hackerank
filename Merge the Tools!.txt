@@ -1,0 +1,16 @@
+def merge_the_tools(string, k):
+    # your code goes here
+    l = len(string)
+    s=''
+    arr = [False]*26
+    for i in range(0,l):
+        c = string[i]
+        idx = ord(c)-ord('A')
+        if arr[idx] is False:
+            s += c
+            arr[idx] = True
+        
+        if (i+1) % k==0:
+            print(s)
+            s=''
+            arr = [False]*26

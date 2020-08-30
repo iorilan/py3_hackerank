@@ -1,0 +1,26 @@
+
+
+if __name__ == '__main__':
+    n1 = int(input())
+    arr1 = set(map(int,input().split()))
+    #arr1.intersection_update([1,2])
+    #print(arr1)
+    #print(sum(arr1))
+
+    n2 = int(input())
+    for i in range(0,n2):
+        cmd = input().split()[0]
+        arr2 = set(map(int,input().split()))
+        if cmd == 'intersection_update':
+            arr1.intersection_update(arr2)
+        elif cmd == 'update':
+            arr1.update(arr2)
+        elif cmd == 'symmetric_difference_update':
+            arr1.symmetric_difference_update(arr2)
+        elif cmd == 'difference_update':
+            arr1.difference_update(arr2)
+        else:
+            pass
+
+    print(sum(arr1))
+        

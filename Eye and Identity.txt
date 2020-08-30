@@ -1,0 +1,5 @@
+import numpy as np
+
+np.set_printoptions(legacy='1.13')
+r,c = map(int,input().split())
+print(np.eye(r,c,0))

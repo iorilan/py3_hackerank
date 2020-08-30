@@ -1,0 +1,8 @@
+import math
+
+if __name__ == '__main__':
+    bc=int(input())
+    ab=int(input())
+    t=bc/ab
+    d=int(round(math.degrees(math.atan(t))))
+    print('{}°'.format(d))

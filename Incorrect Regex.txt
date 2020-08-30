@@ -1,0 +1,12 @@
+import re
+
+    
+if __name__ == '__main__':
+    row = int(input())
+    for r in range(0,row):
+        try:
+            re.compile(input())
+            print("True")
+        except:
+            print("False")
+

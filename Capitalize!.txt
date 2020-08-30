@@ -1,0 +1,14 @@
+def solve(s):
+    first=True
+    res=''
+    for c in s:
+        if first and c != ' ':
+            res += c.capitalize()
+        else:
+            res += c
+
+        if c == ' ':
+            first = True
+        else:
+            first = False
+    return res;

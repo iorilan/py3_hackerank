@@ -1,0 +1,23 @@
+def wrapper(f):
+    def fun(l):
+        # complete the function
+        l2 = len(l)
+        for i in range(0,l2):
+            s=l[i]
+            s1 = s.lstrip('0').lstrip('+')
+            l1 = len(s1)
+            if l1 > 10:
+                s1 = s1[2:]
+            l[i] = '+91 {} {}'.format(s1[0:5], s1[5:10])
+        f(sorted(l))
+    return fun
+
+@wrapper
+def sort_phone(l):
+    print(*sorted(l), sep='\n')
+
+if __name__ == '__main__':
+    l = [input() for _ in range(int(input()))]
+    sort_phone(l) 
+
+

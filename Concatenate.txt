@@ -1,0 +1,10 @@
+import numpy as np
+
+n,m,k = map(int,input().split())
+
+arr1=[]
+for i in range(0,n):
+    arr1.append(list(map(int,input().split())))
+for i in range(0,m):
+    arr1.append(list(map(int,input().split())))
+print(np.array(arr1))

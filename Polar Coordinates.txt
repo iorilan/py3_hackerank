@@ -1,0 +1,7 @@
+
+import cmath
+if __name__ == '__main__':
+    c = complex(input())
+    print(abs(c),end='\n')
+    print(cmath.phase(c))
+    

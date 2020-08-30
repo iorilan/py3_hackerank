@@ -1,0 +1,8 @@
+if __name__ == '__main__':
+    tc = int(input())
+    for i in range(0,tc):
+        n1 = int(input())
+        arr1 = set(map(int,input().split()))
+        n2 = int(input())
+        arr2 = set(map(int,input().split()))
+        print(len(arr1) == len(arr1.intersection(arr2)))

@@ -1,0 +1,3 @@
+s = input()
+arr = sorted(s,key='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1357902468'.index)
+print(*arr,sep='')

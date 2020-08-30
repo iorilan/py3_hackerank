@@ -1,0 +1,12 @@
+
+
+if __name__ == '__main__':
+    n,m = map(int,input().split())
+    arr = list(map(int,input().split()))
+    a = set(map(int,input().split()))
+    b = set(map(int,input().split()))
+    count = len(list(filter(lambda x: x in a,arr)))
+    count -= len(list(filter(lambda x: x in b,arr)))
+    print(count)
+    
+    

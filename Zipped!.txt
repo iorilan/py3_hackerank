@@ -1,0 +1,15 @@
+
+if __name__ == '__main__':
+    col,row = map(int,input().split())
+    #print(row,col)
+    arr = []
+    for i in range(0,row):
+        arr.append(list(map(float,input().split())))
+    #print(list(arr))
+    arr2 = list(zip(*arr));
+
+    for a in arr2:
+        s =0;
+        for n in a:
+            s+=n;
+        print(s/len(a))

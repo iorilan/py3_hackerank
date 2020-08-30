@@ -1,0 +1,18 @@
+n1 = int(input())
+arr = set(map(int,input().split()))
+n2 = int(input())
+
+for i in range(0,n2):
+    cmd = input().split()
+    c0=cmd[0]
+    if c0 == 'pop':
+        arr.pop()
+    elif c0 == 'remove':
+        c1 = int(cmd[1])
+        arr.remove(c1)
+    elif c0 == 'discard':
+        c1 = int(cmd[1])
+        arr.discard(c1)
+    else:
+        pass
+print(sum(arr))

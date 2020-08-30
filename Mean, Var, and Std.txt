@@ -1,0 +1,12 @@
+import numpy as np
+if __name__ == '__main__':
+    arr = []
+    row, col = map(int,input().split())
+    for r in range(0,row):
+        i = list(map(int,input().split()))
+        arr.append(i)
+    #print(arr)
+    np.set_printoptions(legacy='1.13')
+    print(np.mean(arr,axis=1))
+    print(np.var(arr,axis=0))
+    print(np.std(arr,axis=None))

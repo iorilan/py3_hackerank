@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    arr = set(map(int, input().split()))
+    l = len(arr)
+    n = int(input())
+    good = True
+    for i in range(0,n):
+        sub = set(map(int,input().split()))
+        l2 = len(sub)
+        g = l2<l and len(sub.intersection(arr)) == l2
+        if not g:
+            good=False;
+    print(good)

@@ -1,0 +1,30 @@
+def valid(s):
+    #print(s)
+    l = len(s)
+    index=0
+    for i in range(0,l-1):
+        if s[i]<s[i+1]:
+            index=i
+            break
+    #print(index)
+    end=0
+    for end in range(index,l-1):
+        if s[end]>s[end+1]:
+            return False
+        end += 1
+    #print(end,l)
+    return end == l-1
+        
+    
+
+
+if __name__ == '__main__':
+    tc = int(input())
+    for i in range(0,tc):
+        n = int(input())
+        q = list(map(int,input().split()))
+        if valid(q):
+            print('Yes')
+        else:
+            print('No')
+        

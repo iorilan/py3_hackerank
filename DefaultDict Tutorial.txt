@@ -1,0 +1,15 @@
+from collections import defaultdict as dd
+
+if __name__ == '__main__':
+    n,m = map(int,input().split())
+    d1 = dd(list)
+    for i in range(0,n):
+        k1 = input()
+        d1[k1].append(i+1)
+    #print(d1)
+    for i in range(0,m):
+        k = input()
+        if k in d1:
+            print(*d1[k],end=' \n')
+        else:
+            print(-1)

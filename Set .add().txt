@@ -1,0 +1,9 @@
+
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = set()
+    for i in range(0,n):
+        arr.add(input())
+    print(len(arr))
+    

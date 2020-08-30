@@ -1,0 +1,10 @@
+from itertools import combinations_with_replacement as comb
+
+
+if __name__ == '__main__':
+    s,num = input().split()
+    n = int(num)
+    arr = list(comb(sorted(s),n))
+    for a in arr:
+        print(''.join(a))
+  

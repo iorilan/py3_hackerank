@@ -1,0 +1,15 @@
+from html.parser import HTMLParser
+
+class MyHTMLParser(HTMLParser):
+    def handle_starttag(self, tag, attrs):
+        print(tag)
+        for attr in attrs:
+            name = attr[0]
+            val = attr[1]
+            print('-> {} > {}'.format(name,val))
+            #print("->", name, ">", val)
+
+parser = MyHTMLParser()
+
+for i in range(int(input())):
+    parser.feed(input())

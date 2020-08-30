@@ -1,0 +1,12 @@
+from collections import namedtuple as nt
+
+if __name__ == '__main__':
+    n = int(input())
+    title = ','.join(input().split())
+    obj = nt('obj',title)
+    s = 0;
+    for i in range(0,n):
+        row = input().split()
+        o = obj._make(row)
+        s += float(o.MARKS)
+    print(round(s/n,2))

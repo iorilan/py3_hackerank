@@ -1,0 +1,11 @@
+from itertools import groupby as gb
+
+
+from itertools import combinations as comb
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(input().split())
+    k = int(input())
+    arr2 = list(comb(arr,k))
+    arr3 = list(filter(lambda x: 'a' in x, arr2))
+    print(round(len(arr3)/len(arr2),4))

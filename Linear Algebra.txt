@@ -1,0 +1,13 @@
+import numpy as np
+
+    
+if __name__ == '__main__':
+    row = int(input())
+    res = []
+    for r in range(0,row):
+        arr = list(map(float,input().split()))
+        res.append(arr)
+
+    np.set_printoptions(legacy='1.13') #important
+    print(np.linalg.det(res))
+

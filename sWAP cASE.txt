@@ -1,0 +1,16 @@
+def swap_case(s):
+    diff = ord('a')-ord('A')
+    res = ''
+    for c in s:
+        if c >= 'a' and c <= 'z':
+            res += chr(ord(c)-diff);
+        elif c >= 'A' and c<='Z':
+            res += chr(ord(c)+diff);
+        else:
+            res += c;
+    return res
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)

@@ -1,0 +1,13 @@
+from collections import OrderedDict as od
+
+if __name__ == '__main__':
+    n = int(input())
+    d = od()
+    for i in range(0,n):
+        k,_space,v = input().rpartition(' ')
+        if k in d:
+            d[k] += int(v)
+        else:
+            d[k] = int(v)
+    for k in d:
+        print('{} {}'.format(k,d[k]))

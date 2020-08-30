@@ -1,0 +1,14 @@
+from collections import Counter as ct
+
+if __name__ == '__main__':
+    n1 = int(input())
+    arr1 = ct(map(int,input().split()))
+    n2 = int(input())
+    res = 0
+    #print(arr1)
+    for i in range(0,n2):
+        s,p = map(int,input().split())
+        if(s in arr1 and arr1[s]>0):
+            arr1[s]-=1
+            res+=p
+    print(res)

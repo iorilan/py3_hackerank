@@ -1,0 +1,13 @@
+from itertools import groupby as gb
+
+
+if __name__ == '__main__':
+    s = input()
+    arr = gb(s)
+    
+    for k,c in arr:
+        count=len(list(c))
+        print('({}, {})'.format(count,k),end=' ')
+    
+    
+    

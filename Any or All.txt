@@ -1,0 +1,20 @@
+def p(s):
+    l = len(s)
+    m = int(l/2)
+    for i in range(0,m+1):
+        if(s[i] != s[l-1-i]):
+            #print(s[i],s[l-1-i],s)
+            return False
+
+    return True
+
+n = int(input())
+arr = list(map(int,input().split()))
+ok = False
+for a in arr:
+    if p(str(a)):
+        ok=True
+if ok and all(map(lambda x: x>0,arr)):
+    print('True')
+else:
+    print('False')

@@ -1,0 +1,18 @@
+from collections import deque
+
+if __name__ == '__main__':
+    n = int(input())
+    q = deque()
+    for i in range(0,n):
+        cmd = input().split()
+        c = cmd[0]
+        if c == 'append':
+            q.append(int(cmd[1]))
+        elif c == 'appendleft':
+            q.appendleft(int(cmd[1]))
+        elif c == 'pop':
+            q.pop()
+        elif c == 'popleft':
+            q.popleft()
+    print(q)
+    print(*q,end=' ')

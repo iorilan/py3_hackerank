@@ -1,0 +1,19 @@
+
+
+if __name__ == '__main__':
+    n1 = int(input())
+    arr = list(map(int,input().split()))
+    d = {}
+    for n in arr:
+        if n in d:
+            d[n] = d[n]+1
+        else:
+            d[n] = 1
+
+    # for k,v in d.items():
+    #     if(v == 1):
+    #         print (k)
+    ans = list(filter(lambda k: d[k]==1,d.keys()))
+    print(ans[0])
+    
+        

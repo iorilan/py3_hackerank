@@ -1,0 +1,10 @@
+import numpy as np
+
+n,m = map(int,input().split())
+
+arr = []
+for i in range(0,n):
+    arr.append(list(map(int, input().split())))
+arr2 = np.array(arr)
+print(np.transpose(arr2))
+print(arr2.flatten())

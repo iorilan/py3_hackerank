@@ -1,0 +1,18 @@
+import numpy as np
+
+
+if __name__ == '__main__':
+    arr1 = []
+    arr2 = []
+    row= int(input())
+    l = int(row)
+
+    for r in range(0,l):
+        i = list(map(int,input().split()))
+        arr1.append(i)
+    for r in range(0,l):
+        i = list(map(int,input().split()))
+        arr2.append(i)
+    
+    print(np.dot(arr1, arr2))
+

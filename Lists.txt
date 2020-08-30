@@ -1,0 +1,24 @@
+if __name__ == '__main__':
+    N = int(input())
+    res = list()
+    for i in range(0,N):
+        cmdArr= input().split()
+        cmd = cmdArr[0]
+        if cmd == 'insert':
+            p1=cmdArr[1]
+            p2=cmdArr[2]
+            res.insert(int(p1),int(p2))
+        elif cmd == 'print':
+            print(res)
+        elif cmd == 'remove':
+            p1=cmdArr[1]
+            res.remove(int(p1))
+        elif cmd == 'append':
+            p1=cmdArr[1]
+            res.append(int(p1))
+        elif cmd == 'sort':
+            res.sort()
+        elif cmd == 'pop':
+            res.pop()
+        elif cmd == 'reverse':
+            res.reverse()

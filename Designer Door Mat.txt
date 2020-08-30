@@ -1,0 +1,19 @@
+import math
+if __name__ == '__main__':
+    row,col = map(int,input().split())
+    mid = math.floor(row/2)
+    c='.|.'
+    for i in range(0,row):
+        c1=''
+        if i == mid:
+            print('WELCOME'.center(col,'-'))
+            continue
+        elif i < mid:
+            end = 2*i+1
+            for j in range(0,end):
+                c1+=c
+        else:
+            end = 2*(row-i-1) + 1
+            for j in range(0,end):
+                c1+=c
+        print(c1.center(col,'-'))

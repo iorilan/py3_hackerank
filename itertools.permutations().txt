@@ -1,0 +1,10 @@
+from itertools import permutations as perm
+
+if __name__ == '__main__':
+    s,num = input().split()
+    n = int(num)
+    l = list(s)
+    arr = list(perm(l,n))
+    arr.sort()
+    for a in arr:
+        print (''.join(a))

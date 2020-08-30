@@ -1,0 +1,10 @@
+import re
+
+if __name__ == '__main__':
+    n = int(input())
+    for i in range(0,n):
+        n,e = input().split(' ')
+        m = re.match(r'<[A-Za-z][\w\.-]+@[A-Za-z]+\.[A-Za-z]{1,3}>', e)
+        #print(m)
+        if m is not None:
+            print(n,e)

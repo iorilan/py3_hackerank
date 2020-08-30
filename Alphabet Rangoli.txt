@@ -1,0 +1,79 @@
+You are given an integer, . Your task is to print an alphabet rangoli of size . (Rangoli is a form of Indian folk art based on creation of patterns.)
+
+Different sizes of alphabet rangoli are shown below:
+
+#size 3
+
+----c----
+--c-b-c--
+c-b-a-b-c
+--c-b-c--
+----c----
+
+#size 5
+
+--------e--------
+------e-d-e------
+----e-d-c-d-e----
+--e-d-c-b-c-d-e--
+e-d-c-b-a-b-c-d-e
+--e-d-c-b-c-d-e--
+----e-d-c-d-e----
+------e-d-e------
+--------e--------
+
+#size 10
+
+------------------j------------------
+----------------j-i-j----------------
+--------------j-i-h-i-j--------------
+------------j-i-h-g-h-i-j------------
+----------j-i-h-g-f-g-h-i-j----------
+--------j-i-h-g-f-e-f-g-h-i-j--------
+------j-i-h-g-f-e-d-e-f-g-h-i-j------
+----j-i-h-g-f-e-d-c-d-e-f-g-h-i-j----
+--j-i-h-g-f-e-d-c-b-c-d-e-f-g-h-i-j--
+j-i-h-g-f-e-d-c-b-a-b-c-d-e-f-g-h-i-j
+--j-i-h-g-f-e-d-c-b-c-d-e-f-g-h-i-j--
+----j-i-h-g-f-e-d-c-d-e-f-g-h-i-j----
+------j-i-h-g-f-e-d-e-f-g-h-i-j------
+--------j-i-h-g-f-e-f-g-h-i-j--------
+----------j-i-h-g-f-g-h-i-j----------
+------------j-i-h-g-h-i-j------------
+--------------j-i-h-i-j--------------
+----------------j-i-j----------------
+------------------j------------------
+
+def print_rangoli(size):
+    # your code goes here
+    n = size
+    arr = list()
+    end = ord('a')+n
+    total = 4*n-3;
+
+    for x in range(0,n):
+
+        row=""
+        start = ord('a')+x
+        for i in range(start,end):
+            c= chr(i)
+            row += c
+            if i > start:
+                row = c+row;
+            if i < end-1:
+                row += "-"
+                row = "-"+row
+        l = len(row)
+        if l < total:
+            half = int((total-l)/2)
+            for k in range(0,half):
+                row = "-"+row
+                row = row+"-"
+        #print(row)
+        arr.append(row)
+        if x>0:
+            arr.insert(0,row)
+
+    for a in arr:
+        print(a)
+

@@ -1,0 +1,16 @@
+from itertools import combinations as comb
+
+
+if __name__ == '__main__':
+    s,num = input().split()
+    n = int(num)
+    
+    for n1 in range(0,n):
+        l = list(s)
+        l.sort()
+        arr = list(comb(l,n1+1))
+        for a in arr:
+            print(''.join(a))
+        
+
+    
